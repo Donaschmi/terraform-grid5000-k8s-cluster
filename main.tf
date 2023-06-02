@@ -21,6 +21,7 @@ resource "grid5000_job" "k8s" {
   site      = var.site
   command   = "sleep 8d"
   resources = "${var.nodes_selector}/nodes=${var.nodes_count},walltime=${var.walltime}"
+  reservation = var.reservation
   types     = concat(["deploy"], var.oar_extra_types)
 }
 

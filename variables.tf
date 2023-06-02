@@ -27,6 +27,12 @@ variable "nodes_selector" {
     }
 }
 
+variable "reservation" {
+    description = "Reservation"
+    type = string
+    default = ""
+}
+
 variable "oar_extra_types" {
     description = "OAR extra types for resource reservation"
     type = list
