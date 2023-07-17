@@ -59,6 +59,11 @@ resource "null_resource" "docker_install" {
   }
 }
 
+# Configure RKE provider
+provider "rke" {
+  log_file = "rke_debug.log"
+}
+
 resource "rke_cluster" "cluster" {
     depends_on = [null_resource.docker_install]
 
