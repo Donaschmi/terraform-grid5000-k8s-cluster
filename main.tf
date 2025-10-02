@@ -27,7 +27,7 @@ resource "grid5000_job" "k8s" {
 
 resource "grid5000_deployment" "k8s" {
   site        = var.site
-  environment = "debian10-x64-base"
+  environment = "debian11-x64-nfs"
   nodes       = grid5000_job.k8s.assigned_nodes
   key         = file("~/.ssh/id_rsa.pub")
 }
