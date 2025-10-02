@@ -6,11 +6,6 @@ set -ex
 DOCKER_VERSION="19.03.14"
 CONTAINERD_VERSION="1.4.3"
 
-# Use iptables legacy (Only for Debian 10)
-#
-update-alternatives --set iptables /usr/sbin/iptables-legacy
-update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
-
 apt update
 
 # Requirements
