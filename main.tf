@@ -65,6 +65,7 @@ provider "rke" {
 }
 
 resource "rke_cluster" "cluster" {
+    ignore_docker_version = true
     depends_on = [null_resource.docker_install]
 
     dynamic "nodes" {
